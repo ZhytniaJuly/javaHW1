@@ -3,22 +3,24 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int i;
-        System.out.print("Введите целое число: ");
-        i = sc.nextInt();
-        System.out.println("Вы ввели "+ checkValue(i));
+        float i;
+        float j;
+        System.out.print("Введите первое число: ");
+        i = sc.nextFloat();
+        System.out.print("Введите второе число: ");
+        j = sc.nextFloat();
+        System.out.println("Ближайшее число к 10 - "+ check (i,j));;
     }
 
-    private static String checkValue(int i) {
-        String result;
-        if ((i % 2) == 0) {
-            result = "число " + i + " - оно четное ";
+    private static float check(float i, float j) {
+        float result;
+        if (Math.abs(10 - i) < Math.abs(10-j)) {
+            result = i;
         } else {
-                result = "число " + i + " - оно нечетное ";
-            }
+            result = j;
+        }
         return result;
     }
 }
