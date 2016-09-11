@@ -5,7 +5,7 @@ public class Main {
         int[] array;
         array = new int[8];
         for (int i = 0; i < array.length; i++) {
-            array[i] = ((int)(Math.random()*9+1) );
+            array[i] = ((int)(Math.random()*10+1) );
             System.out.print(array[i]+" ");
         }
         System.out.println();
