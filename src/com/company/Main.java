@@ -1,27 +1,18 @@
 package com.company;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        float i;
-        float j;
-        System.out.print("Введите первое число: ");
-        i = sc.nextFloat();
-        System.out.print("Введите второе число: ");
-        j = sc.nextFloat();
-        System.out.println("Ближайшее число к 10 - "+ check (i,j));;
-    }
-
-    private static float check(float i, float j) {
-        float result;
-        if (Math.abs(10 - i) < Math.abs(10-j)) {
-            result = i;
-        } else {
-            result = j;
+        int[] array;
+        array = new int[8];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ((int)(Math.random()*9+1) );
+            System.out.print(array[i]+" ");
         }
-        return result;
+        System.out.println();
+        for(int i=0;i<array.length;i++){
+            if(array[i]%2!=0)array[i]=0;
+            System.out.print(array[i]+" ");
+        }
     }
 }
 
